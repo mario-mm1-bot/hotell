@@ -1,0 +1,5 @@
+{
+  "name": "Andre-Hotel Management",
+  "description": "A comprehensive hotel check-in and check-out application for Andre-Hotel, featuring room selection, guest forms, and booking management.",
+  "requestFramePermissions": []
+}

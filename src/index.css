@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #0066FF;
+  --color-primary-hover: #0052CC;
+  --color-electric-blue: #0066FF;
+  --color-electric-blue-glow: rgba(0, 102, 255, 0.4);
+  --color-paper: #F5F5F0;
+  --color-ink: #141414;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  .bg-electric-gradient {
+    background: linear-gradient(135deg, #0066FF 0%, #0044CC 100%);
+  }
+  
+  .shadow-electric {
+    box-shadow: 0 10px 25px -5px rgba(0, 102, 255, 0.3);
+  }
+
+  .glass-effect {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+
+  .editorial-title {
+    @apply font-serif italic tracking-tight;
+  }
+}
