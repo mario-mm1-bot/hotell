@@ -27,11 +27,18 @@ export interface BookingDetails {
   guestName: string;
   email: string;
   phone: string;
+  emergencyNumber: string;
+  nationality: string;
+  birthDate: string;
+  residenceAddress: string;
   idNumber: string;
   idType: 'passport' | 'cedula' | 'ruc';
   checkInDate: string;
   checkOutDate: string;
   guestsCount: number;
+  companionName?: string;
+  companionDocument?: string;
+  tripReason: string;
   allergies: string;
   specialRequests: string;
   arrivalTime: string;
@@ -48,8 +55,10 @@ export interface CartItem {
   room: Room;
   checkIn: string;
   checkOut: string;
+  nights: number;
   totalPrice: number;
   consumptions: ConsumptionItem[];
   idImage?: string;
   roomStatus?: 'clean' | 'dirty' | 'maintenance';
+  details?: Partial<BookingDetails>;
 }
